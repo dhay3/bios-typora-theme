@@ -14,12 +14,12 @@ Base on three opensourced fonts:
 
 ## Preview
 <div style="float:flex">
-<img src="imgs/2023-05-09_20-16_1.png"  alt="nolmal mode1" style="width:20%;"/>
-<img src="imgs/2023-05-09_20-16_2.png"  alt="nolmal mode2" style="width:20%;"/>
-<img src="imgs/2023-05-09_20-17.png"  alt="code fence" style="width:20%;"/>
-<img src="imgs/2023-05-09_20-17_1.png"  alt="mermaid" style="width:20%;"/>
-<img src="imgs/2023-05-09_20-18.png" alt="focus mode" style="width:40%;"/>
-<img src="imgs/2023-05-09_20-19.png" alt="source code mode" style="width:40%;"/>
+<img src="imgs/2023-05-09_20-16_1.png"  alt="nolmal mode1" style="width:45%;"/>
+<img src="imgs/2023-05-09_20-16_2.png"  alt="nolmal mode2" style="width:45%;"/>
+<img src="imgs/2023-05-09_20-17.png"  alt="code fence" style="width:45%;"/>
+<img src="imgs/2023-05-09_20-17_1.png"  alt="mermaid" style="width:45%;"/>
+<img src="imgs/2023-05-09_20-18.png" alt="focus mode" style="width:45%;"/>
+<img src="imgs/2023-05-09_20-19.png" alt="source code mode" style="width:45%;"/>
 </div>
 
 ## Installation
