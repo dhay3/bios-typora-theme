@@ -1,0 +1,1074 @@
+/*global variables*/
+:root {;
+}
+
+/*custom fonts*/
+/*only support en*/
+@font-face {
+    font-family: "IBMVGA";
+    src: url("fonts/PxPlus_IBM_VGA_9x14.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*support zh*/
+@font-face {
+    font-family: "Cubic";
+    src: url("fonts/Cubic_11_1.013_R.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hack Nerd Font Regular";
+    src: url("fonts/HackNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*custom animations*/
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/*global cascading style*/
+html {
+    box-sizing: border-box;
+    background: #000084;
+}
+
+body {
+    background: #000084;
+    color: #aaaaaa;
+    tab-size: 2;
+    /*font-family: "Hack Nerd Font Regular", monospace, sans-serif !important;*/
+    /*font-family: "Cubic", monospace, sans-serif !important;*/
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif !important;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: justify;
+    caret-color: auto;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    opacity: 0.5;
+    border-radius: 6px;
+}
+
+/*selection*/
+#write span::selection {
+    background: #aaaaaa;
+    color: #FFFFFF;
+}
+
+#write code::selection {
+    background: #aaaaaa;
+    color: #f5f !important;
+    /*color: #f5f ;*/
+}
+
+#write strong span::selection {
+    background: #aaaaaa;
+    /*color: #f55 ;*/
+    color: #f55 !important;
+}
+
+#write em span::selection {
+    background: #aaaaaa;
+    /*color: #ba8b00 ;*/
+    color: #ba8b00 !important;
+}
+
+#write a span::selection,
+#write span a::selection {
+    background: #aaaaaa;
+    color: #ff5 !important;
+    /*color: #ff5;*/
+}
+
+#write del span::selection {
+    background: #aaaaaa;
+    color: #FFFFFF;
+    /*text-decoration-color: #FF033E;*/
+}
+
+#write u span::selection {
+    background: #aaaaaa;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#write h1[mdtype="heading"] span::selection,
+#write h2[mdtype="heading"] span::selection,
+#write h3[mdtype="heading"] span::selection,
+#write h4[mdtype="heading"] span::selection,
+#write h5[mdtype="heading"] span::selection,
+#write h6[mdtype="heading"] span::selection {
+    background: #aaaaaa;
+    color: #000000;
+
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror span::selection,
+#write .md-fences[mdtype="fences"] .CodeMirror-linenumber::selection,
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-selectedtext {
+    background: #aaaaaa !important;
+    color: #000000 !important;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-selected,
+#write .md-fences[mdtype="fences"] .CodeMirror.CodeMirror-focused .CodeMirror-selected {
+    background: #aaaaaa !important;
+}
+
+/*searchpanel ctrl + f*/
+#md-searchpanel .form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+#write .md-search-hit,
+#write .md-search-hit.md-search-select {
+    color: #000000;
+    background: #aaaaaa;
+}
+
+
+#write .md-search-hit.md-search-select::before {
+    content: "→";
+    color: #FF00FF;
+    animation: blink 2s steps(4, start) infinite;
+}
+
+#write .md-search-hit.md-search-select::after {
+    content: "←";
+    color: #FF00FF;
+    animation: blink 2s steps(4, start) infinite;
+}
+
+/* quick open ctrl + p*/
+#typora-quick-open {
+    background-color: #aaaaaa;
+    color: #000000;
+    width: 100%;
+}
+
+#typora-quick-open .typora-quick-open-item.active {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+/*zoom-hint ctrl + shift + =*/
+#zoom-hint {
+    top: 5px;
+}
+
+#zoom-hint #zoom-hint-in:hover,
+#zoom-hint #zoom-hint-out:hover,
+#zoom-hint #zoom-hint-reset:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+/*sidebar*/
+#typora-sidebar[role="menu"] {
+    background: #000000;
+    font-family: "Hack Nerd", monospace, sans-serif;
+}
+
+#typora-sidebar[role="menu"] #outline-content .outline-label:hover {
+    text-decoration: none;
+}
+
+#typora-sidebar[role="menu"] #file-library #file-library-list .file-library-node.active,
+#typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active > .file-node-background {
+    background: #aaaaaa;
+}
+
+#typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-parent-loc,
+#typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-time,
+#typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-file-ext-part {
+    opacity: 1;
+}
+
+#typora-sidebar[role="menu"] #file-library #file-library-list .file-library-node.active,
+#typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active,
+#typora-sidebar[role="menu"] #outline-content .outline-item .outline-active,
+#typora-sidebar[role="menu"] #outline-content .outline-label:hover,
+#typora-sidebar[role="menu"] #outline-content .outline-item:hover,
+#typora-sidebar[role="menu"] .info-panel-tab-title:hover,
+#typora-sidebar[role="menu"] .info-panel-tab-title:hover + .info-panel-tab-border {
+    color: #FFFFFF;
+}
+
+/*dropdown-menu*/
+.context-menu.dropdown-menu {
+    background: #aaaaaa;
+    border-radius: 0;
+}
+
+.context-menu.dropdown-menu > li > a,
+.context-menu.dropdown-menu > .has-extra-menu > a,
+.context-menu.dropdown-menu .menu-item-container a.menu-style-btn.active:hover::first-letter {
+    color: #000000;
+}
+
+.context-menu.dropdown-menu > .has-extra-menu > a::first-letter {
+    color: #FFFFFF;
+}
+
+.context-menu.dropdown-menu > .has-extra-menu > a:hover::first-letter {
+    color: #000000;
+    background: #FFFFFF;
+}
+
+.context-menu.dropdown-menu .active > a:hover,
+.context-menu.dropdown-menu > .has-extra-menu > a:hover {
+    color: #aaaaaa !important;
+    background: #000000 !important;
+}
+
+.context-menu.dropdown-menu .disabled,
+.context-menu.dropdown-menu .active > a:hover {
+    opacity: 1 !important;
+}
+
+.context-menu.dropdown-menu .menu-item-container a.menu-style-btn {
+    color: #FFFFFF;
+    background: inherit;
+}
+
+.context-menu.dropdown-menu .divider {
+    border-top: 2px solid #000000;
+}
+
+/*yaml front matter*/
+#write pre.md-meta-block {
+    background: #222526;
+    color: #00A300;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    opacity: 0.8;
+    border-radius: 6px;
+    line-height: 1.3rem;
+    padding: 0.5rem 1.5rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+#write pre.md-meta-block::before {
+    content: "---";
+}
+
+#write pre.md-meta-block::after {
+    content: "---";
+}
+
+/* notification f8 */
+#md-notification {
+    background: #aaaaaa;
+    color: #000000;
+}
+
+#md-notification #ty-suppress-mode-warning-close-btn {
+    background-color: #aaaaaa;
+    border: 2px solid #000000;
+    margin: 7px 30px 7px 3px;
+    box-shadow: 0 0 0 3px #aaaaaa;
+    filter: drop-shadow(7px 8px 0 #000000);
+}
+
+/* Unibody sidebar */
+#top-titlebar, #top-titlebar * {
+    color: inherit;
+}
+
+#top-titlebar #w-min:hover, #top-titlebar #w-max-group .toolbar-icon:hover {
+    background-color: #67769660;
+}
+
+/*write*/
+content {
+    /*border: 10px solid #F1D4A7;*/
+}
+
+#write {
+    margin: 0 auto;
+    padding-bottom: 7.5rem;
+}
+
+/*headings*/
+#write h2[mdtype="heading"],
+#write h3[mdtype="heading"],
+#write h4[mdtype="heading"],
+#write h5[mdtype="heading"],
+#write h6[mdtype="heading"] {
+    font-size: 1rem;
+}
+
+#write h2[mdtype="heading"],
+#write h3[mdtype="heading"] {
+    background: #00aaaa;
+    color: #000000;
+}
+
+#write h1[mdtype="heading"] {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#write h1[mdtype="heading"] span[md-inline="plain"] {
+    white-space: nowrap;
+    text-shadow: 3px 3px 0 #555;
+    display: inline-block;
+}
+
+#write h1[mdtype="heading"] span[md-inline="plain"]::before {
+    content: "{ ";
+    text-shadow: none;
+    font-family: "Hack Nerd Font Regular", monospace, sans-serif;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+#write h1[mdtype="heading"] span[md-inline="plain"]::after {
+    content: " }";
+    text-shadow: none;
+    font-family: "Hack Nerd Font Regular", monospace, sans-serif;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+#write h2[mdtype="heading"] {
+    padding: 14px 10px;
+}
+
+#write h2.md-focus[mdtype="heading"]::before {
+    content: 'h2';
+    color: #ddd;
+    border: 1px solid;
+    border-radius: 3px;
+    position: absolute;
+    left: -1.642857143rem;
+    top: .357142857rem;
+    float: left;
+    font-size: 9px;
+    padding-left: 2px;
+    padding-right: 2px;
+    vertical-align: bottom;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#write h3[mdtype="heading"] {
+    padding: 0 10px;
+}
+
+#write h4[mdtype="heading"] {
+    border: 1px solid #FFFFFF;
+    padding: 0 10px;
+}
+
+#write h5[mdtype="heading"] {
+    padding-left: 0;
+}
+
+#write h5[mdtype="heading"] span.md-plain::before {
+    margin-right: 0.5rem;
+    content: ">>";
+}
+
+#write h5[mdtype="heading"] span.md-plain::after {
+    margin-left: 0.5rem;
+    content: "<<";
+}
+
+#write h6[mdtype="heading"] {
+    padding-left: 0;
+}
+
+#write h6[mdtype="heading"] span.md-plain::before {
+    margin-right: 1rem;
+    content: ">";
+}
+
+#write h6[mdtype="heading"] span.md-plain::after {
+    margin-left: 1rem;
+    content: "<";
+}
+
+/*paragraph*/
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/*horizontal line*/
+#write div[mdtype="hr"] hr {
+    border: 1px dashed #eee;
+}
+
+/*blockquote*/
+#write blockquote {
+    padding: 9px 18px;
+    margin: 0 0 18px;
+    border-left: 5px solid #FFFFFF;
+}
+
+/*kbd*/
+#write kbd {
+    background: #000000;
+    color: #00FF00;
+    border: none;
+    box-shadow: none;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+/*strong*/
+#write span[md-inline="strong"] strong {
+    color: #f55;
+}
+
+/*emphasis*/
+#write span[md-inline="em"] em {
+    color: #ba8b00;
+}
+
+/*strike*/
+#write span[md-inline="del"] del {
+    text-decoration-color: #FF033E;
+}
+
+/*underline*/
+#write span[md-inline="underline"] u {
+    text-decoration: none;
+    border-bottom: 2px solid #D7D704;
+    padding-bottom: 1px;
+}
+
+/*highlight*/
+#write span[md-inline="highlight"] span {
+    /*padding: 2px;*/
+}
+
+/* hyperlink */
+#write span[md-inline="link"] a {
+    text-decoration: none;
+    color: #fefe54;
+    background-color: transparent;
+}
+
+#write span[md-inline="link"] a:hover {
+    text-decoration: none;
+    color: #fefe54;
+    background: #aa5500;
+}
+
+#write span[md-inline="url"] a {
+    text-decoration: none;
+    color: #fefe54;
+    background: transparent;
+}
+
+#write span[md-inline="url"] a:hover {
+    text-decoration: none;
+    color: #fefe54;
+    background: #aa5500;
+}
+
+#write span[md-inline="url"] a img {
+    border: none;
+}
+
+/*inline code*/
+#write code {
+    color: #f5f;
+    padding: 3px 4px;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    word-wrap: break-word;
+}
+
+/*inline LaTex*/
+#write .md-inline-math[md-inline="inline_math"] script {
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+#write .md-inline-math[md-inline="inline_math"] .MathJax svg {
+    height: 0.75rem;
+    width: auto;
+}
+
+/*ordered list*/
+
+/*unordered list*/
+#write ul li.md-list-item[mdtype="list_item"]::marker,
+#write ul li.md-list-item.md-focus-container[mdtype="list_item"]::marker {
+    color: #0a0;
+    content: "\2666\20";
+}
+
+/*task list*/
+#write ul li.md-task-list-item.md-list-item[mdtype="list_item"]::marker {
+    content: "";
+}
+
+#write li.md-task-list-item[mdtype="list_item"] input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000084;
+    display: inline-block;
+    width: 36px;
+    height: 1rem;
+    margin: 0 -45px;
+}
+
+#write li.md-task-list-item[mdtype="list_item"] input[type="checkbox"]::before {
+    content: "⟨ ⟩";
+    position: absolute;
+    color: #0a0;
+    top: -2px;
+}
+
+#write li.md-task-list-item[mdtype="list_item"] input[checked]::after {
+    content: '*';
+    position: absolute;
+    color: #fff;
+    left: 12.5px;
+    top: 5px;
+}
+
+/*image*/
+#write span[md-inline="image"] .md-image-btn.md-image-input-src-btn::before {
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+/*table of content*/
+#write .md-toc .md-toc-content span * {
+    color: inherit;
+}
+
+#write .md-toc .md-toc-tooltip {
+    background: transparent;
+    border-top: none;
+}
+
+/*footnote*/
+
+#write sup.md-footnote {
+    color: #FF007F;
+    background: transparent;
+    border-radius: 0;
+}
+
+#write .footnotes {
+    color: #FF007F;
+}
+
+#write .footnotes .md-def-name {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#write .footnotes .md-def-name::before {
+    /*color: #FF007F;*/
+    content: "[^";
+}
+
+#write .footnotes .md-def-name::after {
+    /*color: #FF007F;*/
+    content: " ]";
+}
+
+/*table*/
+#write .md-table-fig {
+    margin-top: 30px;
+}
+
+#write .md-table-fig .md-table thead th,
+#write .md-table-fig .md-table tbody td {
+    border: 1px solid #FFFFFF;
+    padding: 10px 16px;
+}
+
+#table-insert-dialog .modal-dialog .modal-content,
+#write .md-table-fig .md-table thead {
+    background: #aaaaaa;
+    color: #000000;
+}
+
+#table-insert-dialog .modal-dialog .modal-content {
+    border: none;
+}
+
+#table-insert-dialog .modal-dialog .modal-content .modal-footer .btn-default,
+#table-insert-dialog .modal-dialog .modal-content .modal-footer .btn-primary {
+    background-color: #aaaaaa;
+    border: 2px solid #000000;
+    margin: 7px 10px 7px 3px;
+    box-shadow: 0 0 0 3px #aaaaaa;
+    filter: drop-shadow(7px 8px 0 #000000);
+}
+
+#table-insert-dialog .modal-dialog .modal-content .modal-body .form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+/*code fence default*/
+#write .md-fences[mdtype="fences"] .code-tooltip {
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+#write .md-fences[mdtype="fences"] .code-tooltip .ty-input {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror {
+    background: #000084;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    margin-bottom: 2rem;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-cursor {
+    border-left: 1px solid #fefe54;
+    /*border-left: 1px solid #ff5;*/
+    /*opacity: 0.3;*/
+    height: 1rem !important;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror-linenumber {
+    color: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror[lang=""] {
+    color: #0a0;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .CodeMirror-activeline-background {
+    /*background: red*/
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-keyword {
+    color: rgba(199, 146, 234, 1);
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-operator {
+    color: rgba(233, 237, 237, 1);
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-variable-2 {
+    color: #80CBC4;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-variable-3 {
+    color: #82B1FF;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-builtin {
+    color: #DECB6B;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-atom {
+    color: #F77669;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-number {
+    color: #F77669;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-def {
+    color: rgba(233, 237, 237, 1);
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-string {
+    color: #C3E88D;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-string-2 {
+    color: #80CBC4;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-comment {
+    color: #546E7A;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-variable {
+    color: #82B1FF;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-tag {
+    color: #80CBC4;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-meta {
+    color: #80CBC4;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-attribute {
+    color: #FFCB6B;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-property {
+    color: #80CBAE;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-qualifier {
+    color: #DECB6B;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-variable-3 {
+    color: #DECB6B;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-tag {
+    color: rgba(255, 83, 112, 1);
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .cm-error {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: #EC5F67;
+}
+
+#write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-code .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+/*laTex fence*/
+#write .mathjax-block {
+    background-color: #000084;
+}
+
+#write .mathjax-block .CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #fefe54;
+    height: 1rem !important;
+}
+
+#write .mathjax-block .CodeMirror span::selection,
+#write .mathjax-block .CodeMirror-linenumber::selection,
+#write .mathjax-block .CodeMirror .CodeMirror-selectedtext {
+    background: #aaaaaa !important;
+    color: #000000 !important;
+}
+
+#write .mathjax-block .CodeMirror .CodeMirror-selected,
+#write .mathjax-block .CodeMirror.CodeMirror-focused .CodeMirror-selected {
+    background: #aaaaaa !important;
+}
+
+#write .mathjax-block .md-math-container .MathJax,
+#write .mathjax-block .md-mathblock-panel .MathJax[jax="SVG"][display="true"] {
+    text-align: left;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    margin: 4px 4px;
+}
+
+#write .mathjax-block:hover .md-rawblock-container,
+#write .mathjax-block:hover .md-rawblock-tooltip {
+    animation: showRawBlockTooltip 0s linear;
+    background: #000084;
+}
+
+#write .mathjax-block .md-rawblock-control,
+#write .mathjax-block:hover .md-rawblock-tooltip {
+    background: #000084;
+}
+
+#write .mathjax-block .CodeMirror .CodeMirror-code .cm-tag {
+    color: rgba(199, 146, 234, 1);
+}
+
+#write .mathjax-block .CodeMirror .CodeMirror-code .cm-bracket {
+    color: #FFFFFF;
+
+}
+
+#write .mathjax-block .CodeMirror .CodeMirror-code .cm-atom {
+    color: #82B1FF;
+}
+
+#write .mathjax-block .CodeMirror-code .CodeMirror-line span {
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+#write .mathjax-block .CodeMirror-linenumber {
+    color: #FFFFFF;
+    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+}
+
+/*html*/
+#write .md-htmlblock .CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #fefe54;
+    height: 1rem !important;
+}
+
+#write .md-htmlblock:hover .md-rawblock-tooltip,
+#write .md-htmlblock:hover .md-rawblock-container {
+    animation: showRawBlockTooltip 0s linear;
+    background: #000084;
+}
+
+#write .md-htmlblock .md-rawblock-control,
+#write .md-htmlblock:hover .md-rawblock-tooltip {
+    background: #000084;
+}
+
+/*mermaid*/
+/*mermaid flowchart shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node rect,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node polygon,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .clusters .cluster rect,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node circle {
+    fill: transparent;
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .edgePaths .flowchart-link,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .marker {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+}
+
+/*mermaid flowchart fonts*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div span {
+    font-family: "Hack Nerd", monospace, sans-serif;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div .edgeLabel {
+    color: #000000;
+    background: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div .nodeLabel {
+    color: #aaaaaa;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node.clickable .label span {
+    color: #fefe54;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node.clickable .label span:hover {
+    background: #aa5500;
+    color: #fefe54;
+}
+
+/*mermaid sequence diagrams shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .actor,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .messageLine0,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .messageLine1,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .actor-man circle,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .actor-man line,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .note {
+    fill: #000084;
+    stroke: #FFFFFF;
+}
+
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #arrowhead path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #filled-head path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #sequencenumber {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+}
+
+/*mermaid sequence diagrams font*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .messageText,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview text.actor > tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .noteText > tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText > tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText {
+    fill: #aaaaaa;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .sequenceNumber {
+    fill: #000000;
+}
+
+/*mermaid class diagram shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .edgePaths .relation,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node .divider {
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #classDiagram-dependencyEnd {
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/*mermaid class diagram font*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .classTitleText {
+    fill: #FFFFFF;
+}
+
+/*mermaid state diagram shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .edgePaths .transition,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .clusters .statediagram-state rect {
+    fill: transparent;
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #statediagram-barbEnd {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+
+}
+
+/*mermaid state diagram font*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .statediagramTitleText {
+    fill: #FFFFFF;
+}
+
+/*mermaid entity relationship diagrams shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .entityBox {
+    fill: #000084;
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #ONLY_ONE_START path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #ZERO_OR_MORE_END path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #ONE_OR_MORE_END path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #ONE_OR_MORE_START path,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .relationshipLine {
+    stroke: #FFFFFF !important;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .attributeBoxOdd,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .attributeBoxEven {
+    fill: #000084;
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .relationshipLabelBox {
+    opacity: 1;
+}
+
+/*mermaid entity relationship diagrams font*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .entityTitleText {
+    fill: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .entityLabel {
+    fill: #aaaaaa;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .relationshipLabel {
+    fill: #000000;
+}
+
+/*mermaid pipe chart shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .pieCircle {
+    stroke: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .pieTitleText {
+    fill: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .legend text {
+    font-size: 0.6rem;
+    fill: #FFFFFF;
+}
+
+/*mermaid git shape*/
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .gitTitleText {
+    fill: #FFFFFF;
+}
+
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .branch {
+    stroke: #FFFFFF;
+}
+
+
+/*source code mode*/
+#typora-source {
+    font-family: "Hack Nerd", monospace, sans-serif;
+    color: #aaaaaa;
+}
+
+#typora-source .cm-s-typora-default .cm-header {
+    color: #00aaaa;
+}
+
+#typora-source .cm-tag {
+    color: #00A300;
+}
+
+#typora-source .cm-code,
+#typora-source .cm-comment,
+#typora-source .cm-overlay {
+    color: #f5f;
+}
+
+#typora-source .cm-strong {
+    color: #f55;
+}
+
+#typora-source .cm-em {
+    color: #ba8b00;
+}
+
+#typora-source .cm-del {
+    text-decoration-color: #FF033E;
+}
+
+#typora-source .cm-link {
+    text-decoration: none;
+    color: #fefe54;
+    background-color: transparent;
+}
+
+#typora-source .cm-link:hover {
+    text-decoration: none;
+    color: #fefe54;
+    background: #aa5500;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: transparent;
+}
+
+/*focus mode*/
+/*.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {*/
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) span {
+    color: #A0AFB7 !important;
+    filter: brightness(0.8);
+}
+
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus, .on-focus-mode .md-focus-container {
+    color: #FFFFFF;
+    filter: brightness(1.5);
+}
+
+/*.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) *,*/
+/*.on-focus-mode .md-fences.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) *,*/
+/*.on-focus-mode .md-htmlblock.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) * {*/
+/*    filter: none;*/
+/*}*/
+
