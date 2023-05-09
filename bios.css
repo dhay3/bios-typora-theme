@@ -1,5 +1,9 @@
 /*global variables*/
-:root {;
+:root {
+    --dos-font-famliy1: "IBMVGA", "Cubic", monospace, sans-serif;
+    --dos-font-famliy2: "Hack Nerd", monospace, sans-serif;
+    --dos-base-bg: #000084;
+    --dose-base-color: #aaaaaa;
 }
 
 /*custom fonts*/
@@ -45,16 +49,16 @@
 /*global cascading style*/
 html {
     box-sizing: border-box;
-    background: #000084;
+    background: var(--dos-base-bg);
 }
 
 body {
-    background: #000084;
-    color: #aaaaaa;
+    background: var(--dos-base-bg);
+    color: var(--dose-base-color);
     tab-size: 2;
     /*font-family: "Hack Nerd Font Regular", monospace, sans-serif !important;*/
     /*font-family: "Cubic", monospace, sans-serif !important;*/
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif !important;
+    font-family: var(--dos-font-famliy1) !important;
     font-size: 20px;
     line-height: 1.7;
     text-align: justify;
@@ -68,50 +72,50 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     opacity: 0.5;
     border-radius: 6px;
 }
 
 /*selection*/
 #write span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #FFFFFF;
 }
 
 #write code::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #f5f !important;
     /*color: #f5f ;*/
 }
 
 #write strong span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     /*color: #f55 ;*/
     color: #f55 !important;
 }
 
 #write em span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     /*color: #ba8b00 ;*/
     color: #ba8b00 !important;
 }
 
 #write a span::selection,
 #write span a::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #ff5 !important;
     /*color: #ff5;*/
 }
 
 #write del span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #FFFFFF;
     /*text-decoration-color: #FF033E;*/
 }
 
 #write u span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #FFFFFF;
     text-decoration: underline;
 }
@@ -122,7 +126,7 @@ body {
 #write h4[mdtype="heading"] span::selection,
 #write h5[mdtype="heading"] span::selection,
 #write h6[mdtype="heading"] span::selection {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #000000;
 
 }
@@ -130,13 +134,13 @@ body {
 #write .md-fences[mdtype="fences"] .CodeMirror span::selection,
 #write .md-fences[mdtype="fences"] .CodeMirror-linenumber::selection,
 #write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-selectedtext {
-    background: #aaaaaa !important;
+    background: var(--dose-base-color) !important;
     color: #000000 !important;
 }
 
 #write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-selected,
 #write .md-fences[mdtype="fences"] .CodeMirror.CodeMirror-focused .CodeMirror-selected {
-    background: #aaaaaa !important;
+    background: var(--dose-base-color) !important;
 }
 
 /*searchpanel ctrl + f*/
@@ -148,7 +152,7 @@ body {
 #write .md-search-hit,
 #write .md-search-hit.md-search-select {
     color: #000000;
-    background: #aaaaaa;
+    background: var(--dose-base-color);
 }
 
 
@@ -166,7 +170,7 @@ body {
 
 /* quick open ctrl + p*/
 #typora-quick-open {
-    background-color: #aaaaaa;
+    background-color: var(--dose-base-color);
     color: #000000;
     width: 100%;
 }
@@ -191,7 +195,7 @@ body {
 /*sidebar*/
 #typora-sidebar[role="menu"] {
     background: #000000;
-    font-family: "Hack Nerd", monospace, sans-serif;
+    font-family: var(--dos-font-famliy2);
 }
 
 #typora-sidebar[role="menu"] #outline-content .outline-label:hover {
@@ -200,7 +204,7 @@ body {
 
 #typora-sidebar[role="menu"] #file-library #file-library-list .file-library-node.active,
 #typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active > .file-node-background {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
 }
 
 #typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-parent-loc,
@@ -221,7 +225,7 @@ body {
 
 /*dropdown-menu*/
 .context-menu.dropdown-menu {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     border-radius: 0;
 }
 
@@ -242,7 +246,7 @@ body {
 
 .context-menu.dropdown-menu .active > a:hover,
 .context-menu.dropdown-menu > .has-extra-menu > a:hover {
-    color: #aaaaaa !important;
+    color: var(--dose-base-color) !important;
     background: #000000 !important;
 }
 
@@ -264,7 +268,7 @@ body {
 #write pre.md-meta-block {
     background: #222526;
     color: #00A300;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     opacity: 0.8;
     border-radius: 6px;
@@ -284,15 +288,15 @@ body {
 
 /* notification f8 */
 #md-notification {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #000000;
 }
 
 #md-notification #ty-suppress-mode-warning-close-btn {
-    background-color: #aaaaaa;
+    background-color: var(--dose-base-color);
     border: 2px solid #000000;
     margin: 7px 30px 7px 3px;
-    box-shadow: 0 0 0 3px #aaaaaa;
+    box-shadow: 0 0 0 3px var(--dose-base-color);
     filter: drop-shadow(7px 8px 0 #000000);
 }
 
@@ -437,7 +441,7 @@ p {
     color: #00FF00;
     border: none;
     box-shadow: none;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 /*strong*/
@@ -500,13 +504,13 @@ p {
 #write code {
     color: #f5f;
     padding: 3px 4px;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
     word-wrap: break-word;
 }
 
 /*inline LaTex*/
 #write .md-inline-math[md-inline="inline_math"] script {
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 #write .md-inline-math[md-inline="inline_math"] .MathJax svg {
@@ -531,7 +535,7 @@ p {
 #write li.md-task-list-item[mdtype="list_item"] input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    background: #000084;
+    background: var(--dos-base-bg);
     display: inline-block;
     width: 36px;
     height: 1rem;
@@ -555,7 +559,7 @@ p {
 
 /*image*/
 #write span[md-inline="image"] .md-image-btn.md-image-input-src-btn::before {
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 /*table of content*/
@@ -608,7 +612,7 @@ p {
 
 #table-insert-dialog .modal-dialog .modal-content,
 #write .md-table-fig .md-table thead {
-    background: #aaaaaa;
+    background: var(--dose-base-color);
     color: #000000;
 }
 
@@ -618,10 +622,10 @@ p {
 
 #table-insert-dialog .modal-dialog .modal-content .modal-footer .btn-default,
 #table-insert-dialog .modal-dialog .modal-content .modal-footer .btn-primary {
-    background-color: #aaaaaa;
+    background-color: var(--dose-base-color);
     border: 2px solid #000000;
     margin: 7px 10px 7px 3px;
-    box-shadow: 0 0 0 3px #aaaaaa;
+    box-shadow: 0 0 0 3px var(--dose-base-color);
     filter: drop-shadow(7px 8px 0 #000000);
 }
 
@@ -636,7 +640,7 @@ p {
     padding-right: 0;
     border: 1px solid transparent;
     border-radius: 3px;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 #write .md-fences[mdtype="fences"] .code-tooltip .ty-input {
@@ -645,10 +649,10 @@ p {
 }
 
 #write .md-fences[mdtype="fences"] .CodeMirror {
-    background: #000084;
+    background: var(--dos-base-bg);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     border-radius: 6px;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
     margin-bottom: 2rem;
 }
 
@@ -759,7 +763,7 @@ p {
 
 /*laTex fence*/
 #write .mathjax-block {
-    background-color: #000084;
+    background-color: var(--dos-base-bg);
 }
 
 #write .mathjax-block .CodeMirror div.CodeMirror-cursor {
@@ -770,13 +774,13 @@ p {
 #write .mathjax-block .CodeMirror span::selection,
 #write .mathjax-block .CodeMirror-linenumber::selection,
 #write .mathjax-block .CodeMirror .CodeMirror-selectedtext {
-    background: #aaaaaa !important;
+    background: var(--dose-base-color) !important;
     color: #000000 !important;
 }
 
 #write .mathjax-block .CodeMirror .CodeMirror-selected,
 #write .mathjax-block .CodeMirror.CodeMirror-focused .CodeMirror-selected {
-    background: #aaaaaa !important;
+    background: var(--dose-base-color) !important;
 }
 
 #write .mathjax-block .md-math-container .MathJax,
@@ -790,12 +794,12 @@ p {
 #write .mathjax-block:hover .md-rawblock-container,
 #write .mathjax-block:hover .md-rawblock-tooltip {
     animation: showRawBlockTooltip 0s linear;
-    background: #000084;
+    background: var(--dos-base-bg);
 }
 
 #write .mathjax-block .md-rawblock-control,
 #write .mathjax-block:hover .md-rawblock-tooltip {
-    background: #000084;
+    background: var(--dos-base-bg);
 }
 
 #write .mathjax-block .CodeMirror .CodeMirror-code .cm-tag {
@@ -812,12 +816,12 @@ p {
 }
 
 #write .mathjax-block .CodeMirror-code .CodeMirror-line span {
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 #write .mathjax-block .CodeMirror-linenumber {
     color: #FFFFFF;
-    font-family: "IBMVGA", "Cubic", monospace, sans-serif;
+    font-family: var(--dos-font-famliy1);
 }
 
 /*html*/
@@ -829,12 +833,12 @@ p {
 #write .md-htmlblock:hover .md-rawblock-tooltip,
 #write .md-htmlblock:hover .md-rawblock-container {
     animation: showRawBlockTooltip 0s linear;
-    background: #000084;
+    background: var(--dos-base-bg);
 }
 
 #write .md-htmlblock .md-rawblock-control,
 #write .md-htmlblock:hover .md-rawblock-tooltip {
-    background: #000084;
+    background: var(--dos-base-bg);
 }
 
 /*mermaid*/
@@ -856,7 +860,7 @@ p {
 
 /*mermaid flowchart fonts*/
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div span {
-    font-family: "Hack Nerd", monospace, sans-serif;
+    font-family: var(--dos-font-famliy2);
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div .edgeLabel {
@@ -865,7 +869,7 @@ p {
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root div .nodeLabel {
-    color: #aaaaaa;
+    color: var(--dose-base-color);
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node.clickable .label span {
@@ -884,7 +888,7 @@ p {
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .actor-man circle,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .actor-man line,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .note {
-    fill: #000084;
+    fill: var(--dos-base-bg);
     stroke: #FFFFFF;
 }
 
@@ -902,7 +906,7 @@ p {
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .noteText > tspan,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText > tspan,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText {
-    fill: #aaaaaa;
+    fill: var(--dose-base-color);
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .sequenceNumber {
@@ -945,7 +949,7 @@ p {
 
 /*mermaid entity relationship diagrams shape*/
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .entityBox {
-    fill: #000084;
+    fill: var(--dos-base-bg);
     stroke: #FFFFFF;
 }
 
@@ -959,7 +963,7 @@ p {
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .attributeBoxOdd,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .attributeBoxEven {
-    fill: #000084;
+    fill: var(--dos-base-bg);
     stroke: #FFFFFF;
 }
 
@@ -973,7 +977,7 @@ p {
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .entityLabel {
-    fill: #aaaaaa;
+    fill: var(--dose-base-color);
 }
 
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .relationshipLabel {
@@ -1006,8 +1010,8 @@ p {
 
 /*source code mode*/
 #typora-source {
-    font-family: "Hack Nerd", monospace, sans-serif;
-    color: #aaaaaa;
+    font-family: var(--dos-font-famliy2);
+    color: var(--dose-base-color);
 }
 
 #typora-source .cm-s-typora-default .cm-header {
