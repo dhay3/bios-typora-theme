@@ -192,6 +192,8 @@ $$
 
 <h2>Raw Html H2 heading</h2>
 
+<div style="height:50px;width:50px;background:red;"></div>
+
 ## Mermaid
 
 ### flowchart

@@ -21,6 +21,7 @@ Base on three opensourced fonts:
 <img src="imgs/2023-05-09_20-18.png" alt="focus mode" style="width:40%;"/>
 <img src="imgs/2023-05-09_20-19.png" alt="source code mode" style="width:40%;"/>
 </div>
+
 ## Installation
 
 1. Dowload or clone this repository.

@@ -841,6 +841,19 @@ p {
     background: var(--dos-base-bg);
 }
 
+#write .md-htmlblock .cm-s-inner .cm-bracket,
+#write .md-htmlblock .cm-s-inner .cm-tag {
+    color: #9D63F7;
+}
+
+#write .md-htmlblock .cm-s-inner .cm-attribute {
+    color: #00A289;
+}
+
+#write .md-htmlblock .cm-s-inner .cm-string {
+    color: #F73738;
+}
+
 /*mermaid*/
 /*mermaid flowchart shape*/
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .root .nodes .node rect,
@@ -1075,4 +1088,3 @@ p {
 /*.on-focus-mode .md-htmlblock.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) * {*/
 /*    filter: none;*/
 /*}*/
-
