@@ -2,7 +2,7 @@
 
 > Designed and tested on Linux/Windows. Not fully tested, but should work for MacOS. 
 
-Bios is a theme of typora makes writting cool and fun, sprit from [BOOTSTRA.386](https://github.com/kristopolous/BOOTSTRA.386).
+Bios is a theme of typora, sprit from [BOOTSTRA.386](https://github.com/kristopolous/BOOTSTRA.386).
 
 Base on three opensourced fonts: 
 
@@ -25,13 +25,13 @@ Base on three opensourced fonts:
 ## Installation
 
 1. Dowload or clone this repository.
-2. Move `dos.css` and `fonts` folder into Typora’s theme folder.[^1]
+2. Move `bios.css` and `fonts` folder into Typora’s theme folder.[^1]
 
 [^1]: [How to install a theme for Typora](https://theme.typora.io/doc/Install-Theme/)
 
 ## Custom
 
-If you dislike the brackground color or fonts you can change the global variables’ property in `:root` pseudo-class of `dos.css` , others’ cascading style not in  `:root` as well.
+If you dislike the brackground color or fonts you can change the global variables’ property in `:root` pseudo-class of `bios.css` , others’ cascading style not in  `:root` as well.
 
 ## Reporting/Contributing
 
