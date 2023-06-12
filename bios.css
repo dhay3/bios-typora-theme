@@ -521,8 +521,8 @@ p {
 /*ordered list*/
 
 /*unordered list*/
-#write ul li.md-list-item[mdtype="list_item"]::marker,
-#write ul li.md-list-item.md-focus-container[mdtype="list_item"]::marker {
+#write ul > li.md-list-item[mdtype="list_item"]::marker,
+#write ul > li.md-list-item.md-focus-container[mdtype="list_item"]::marker {
     color: #0a0;
     content: "\2666\20";
 }
@@ -542,14 +542,14 @@ p {
     margin: 0 -45px;
 }
 
-#write li.md-task-list-item[mdtype="list_item"] input[type="checkbox"]::before {
+#write ul li.md-task-list-item[mdtype="list_item"] input[type="checkbox"]::before {
     content: "⟨ ⟩";
     position: absolute;
     color: #0a0;
     top: -2px;
 }
 
-#write li.md-task-list-item[mdtype="list_item"] input[checked]::after {
+#write ul li.md-task-list-item[mdtype="list_item"] input[checked]::after {
     content: '*';
     position: absolute;
     color: #fff;
