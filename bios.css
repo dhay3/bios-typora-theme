@@ -131,6 +131,10 @@ body {
 
 }
 
+#write .md-fences[mdtype="fences"] .CodeMirror pre{
+    font-size: 1rem;
+}
+
 #write .md-fences[mdtype="fences"] .CodeMirror span::selection,
 #write .md-fences[mdtype="fences"] .CodeMirror-linenumber::selection,
 #write .md-fences[mdtype="fences"] .CodeMirror .CodeMirror-selectedtext {
