@@ -936,7 +936,8 @@ p {
     stroke: #FFFFFF;
 }
 
-#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #classDiagram-dependencyEnd {
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview #classDiagram-dependencyEnd,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .marker.extension.classDiagram {
     fill: #FFFFFF !important;
     stroke: #FFFFFF !important;
 }
