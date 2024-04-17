@@ -518,7 +518,7 @@ p {
 }
 
 #write .md-inline-math[md-inline="inline_math"] .MathJax svg {
-    height: 0.75rem;
+    height: 1.1rem;
     width: auto;
 }
 
