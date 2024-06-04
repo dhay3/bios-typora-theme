@@ -504,6 +504,13 @@ p {
     border: none;
 }
 
+/*references*/
+#write span[md-inline="reflink"] a {
+    text-decoration: none;
+    color: #fefe54;
+    background: transparent;
+}
+
 /*inline code*/
 #write code {
     color: #f5f;
