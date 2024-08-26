@@ -24,7 +24,7 @@ Base on three opensourced fonts:
 
 ## Installation
 
-1. Dowload or clone this repository.
+1. [Dowload](https://theme.typora.io/theme/Bios/) or clone this repository.
 2. Move `bios.css` and `fonts` folder into Typora’s theme folder.[^1]
 
 [^1]: [How to install a theme for Typora](https://theme.typora.io/doc/Install-Theme/)
