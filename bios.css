@@ -1,7 +1,5 @@
 /*global variables*/
 :root {
-    --dos-font-famliy1: "IBMVGA", "Cubic", monospace, sans-serif;
-    --dos-font-famliy2: "Hack Nerd", monospace, sans-serif;
     --dos-base-bg: #000084;
     --dose-base-color: #aaaaaa;
 }
@@ -35,6 +33,7 @@
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
@@ -131,7 +130,7 @@ body {
 
 }
 
-#write .md-fences[mdtype="fences"] .CodeMirror pre{
+#write .md-fences[mdtype="fences"] .CodeMirror pre {
     font-size: 1rem;
 }
 
@@ -206,26 +205,41 @@ body {
     text-decoration: none;
 }
 
-#typora-sidebar[role="menu"] #file-library #file-library-list .file-library-node.active,
-#typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active > .file-node-background {
-    background: var(--dose-base-color);
-}
-
 #typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-parent-loc,
 #typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-time,
 #typora-sidebar[role="menu"] #file-library #file-library-list .file-list-item-file-ext-part {
     opacity: 1;
 }
 
-#typora-sidebar[role="menu"] #file-library #file-library-list .file-library-node.active,
-#typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active,
+#typora-sidebar[role="menu"] #file-library #file-library-tree .file-node-content,
+#typora-sidebar[role="menu"] #outline-content .outline-label {
+    color: var(--dose-base-color)
+}
+
+#typora-sidebar[role="menu"] #file-library #file-library-tree .file-tree-node.active .file-node-content,
+#typora-sidebar[role="menu"] #file-library #file-library-tree .file-node-content:hover,
 #typora-sidebar[role="menu"] #outline-content .outline-item .outline-active,
 #typora-sidebar[role="menu"] #outline-content .outline-label:hover,
-#typora-sidebar[role="menu"] #outline-content .outline-item:hover,
+#typora-sidebar[role="menu"] #outline-content .outline-label .ty-outline-hit,
 #typora-sidebar[role="menu"] .info-panel-tab-title:hover,
-#typora-sidebar[role="menu"] .info-panel-tab-title:hover + .info-panel-tab-border {
+#typora-sidebar[role="menu"] .info-panel-tab-title:hover+.info-panel-tab-border {
     color: #FFFFFF;
 }
+
+#typora-sidebar[role="menu"] #file-library .file-tree-node.active>.file-node-background {
+    background-color: transparent;
+}
+
+#typora-sidebar[role="menu"] #outline-content .outline-item:hover {
+    background-color: var(--dose-base-color);
+}
+
+#typora-sidebar[role="menu"] #file-library-search-panel input {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+#typora-sidebar[role="menu"] #sidebar-footer {}
 
 /*dropdown-menu*/
 .context-menu.dropdown-menu {
@@ -233,29 +247,29 @@ body {
     border-radius: 0;
 }
 
-.context-menu.dropdown-menu > li > a,
-.context-menu.dropdown-menu > .has-extra-menu > a,
+.context-menu.dropdown-menu>li>a,
+.context-menu.dropdown-menu>.has-extra-menu>a,
 .context-menu.dropdown-menu .menu-item-container a.menu-style-btn.active:hover::first-letter {
     color: #000000;
 }
 
-.context-menu.dropdown-menu > .has-extra-menu > a::first-letter {
+.context-menu.dropdown-menu>.has-extra-menu>a::first-letter {
     color: #FFFFFF;
 }
 
-.context-menu.dropdown-menu > .has-extra-menu > a:hover::first-letter {
+.context-menu.dropdown-menu>.has-extra-menu>a:hover::first-letter {
     color: #000000;
     background: #FFFFFF;
 }
 
-.context-menu.dropdown-menu .active > a:hover,
-.context-menu.dropdown-menu > .has-extra-menu > a:hover {
+.context-menu.dropdown-menu .active>a:hover,
+.context-menu.dropdown-menu>.has-extra-menu>a:hover {
     color: var(--dose-base-color) !important;
     background: #000000 !important;
 }
 
 .context-menu.dropdown-menu .disabled,
-.context-menu.dropdown-menu .active > a:hover {
+.context-menu.dropdown-menu .active>a:hover {
     opacity: 1 !important;
 }
 
@@ -305,11 +319,13 @@ body {
 }
 
 /* Unibody sidebar */
-#top-titlebar, #top-titlebar * {
+#top-titlebar,
+#top-titlebar * {
     color: inherit;
 }
 
-#top-titlebar #w-min:hover, #top-titlebar #w-max-group .toolbar-icon:hover {
+#top-titlebar #w-min:hover,
+#top-titlebar #w-max-group .toolbar-icon:hover {
     background-color: #67769660;
 }
 
@@ -532,8 +548,8 @@ p {
 /*ordered list*/
 
 /*unordered list*/
-#write ul > li.md-list-item[mdtype="list_item"]::marker,
-#write ul > li.md-list-item.md-focus-container[mdtype="list_item"]::marker {
+#write ul>li.md-list-item[mdtype="list_item"]::marker,
+#write ul>li.md-list-item.md-focus-container[mdtype="list_item"]::marker {
     color: #0a0;
     content: "\2666\20";
 }
@@ -926,9 +942,9 @@ p {
 
 /*mermaid sequence diagrams font*/
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .messageText,
-#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview text.actor > tspan,
-#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .noteText > tspan,
-#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText > tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview text.actor>tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .noteText>tspan,
+#write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText>tspan,
 #write .md-fences[mdtype="fences"][lang="mermaid"] .md-diagram-panel-preview .loopText {
     fill: var(--dose-base-color);
 }
@@ -1090,7 +1106,8 @@ p {
 
 
 .on-focus-mode .md-focus,
-.on-focus-mode .md-focus, .on-focus-mode .md-focus-container {
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
     color: #FFFFFF;
     filter: brightness(1.5);
 }
